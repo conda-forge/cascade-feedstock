@@ -10,7 +10,7 @@ source:
   sha256: 852466c9f97126abd67fd5ed91512895f0bc98ac5d958577e3ae108755a5d5eb
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -22,12 +22,10 @@ requirements:
     - python
     - pybind11 >=2.10
     - pybind11-abi
-    - tbb
     - tbb-devel
     - boost-cpp >=1.73
     - fmt
     - heyoka >=0.21.0
-    - heyoka.py >=0.21.0
     - spdlog
     - xtensor
     - xtensor-blas
@@ -35,15 +33,9 @@ requirements:
 
   run:
     - python
-    - tbb
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - numpy
-    - fmt
-    - heyoka >=0.21.0
     - heyoka.py >=0.21.0
-    - spdlog
-    - xtensor
-    - xtensor-blas  
 
 test:
   commands:
