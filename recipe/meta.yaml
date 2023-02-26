@@ -1,5 +1,5 @@
 {% set name = "cascade" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/esa/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 852466c9f97126abd67fd5ed91512895f0bc98ac5d958577e3ae108755a5d5eb
+  sha256: 560922c273d6cd368a56f96843c6cd1883e8ce7801a2dc0bfd4aa265351c692b
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
