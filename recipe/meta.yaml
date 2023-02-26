@@ -18,6 +18,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - ninja
+    - clang               # [win]
   host:
     - python
     - pybind11 >=2.10

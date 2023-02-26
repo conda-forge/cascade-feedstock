@@ -2,7 +2,10 @@ mkdir build
 cd build
 
 cmake ^
-    -G "Visual Studio 17 2022" -A x64 ^
+    -G "Ninja" ^
+    -DCMAKE_C_COMPILER=clang-cl ^
+    -DCMAKE_CXX_COMPILER=clang-cl ^
+    -DCMAKE_BUILD_TYPE=Release ^
     -DPython3_EXECUTABLE=%PREFIX%\python.exe ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
@@ -11,10 +14,6 @@ cmake ^
     -DCASCADE_BUILD_PYTHON_BINDINGS=yes ^
     ..
 
-cmake --build . --config Release
+cmake --build . --target install
 
-set PATH=%PATH%;%CD%\Release
-
-ctest --output-on-failure -j${CPU_COUNT} -V -C Release
-
-cmake --build . --config Release --target install
+ctest --output-on-failure -j${CPU_COUNT} -V
