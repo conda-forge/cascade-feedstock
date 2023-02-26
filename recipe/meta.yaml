@@ -22,12 +22,10 @@ requirements:
     - python
     - pybind11 >=2.10
     - pybind11-abi
-    - tbb
     - tbb-devel
     - boost-cpp >=1.73
     - fmt
     - heyoka >=0.21.0
-    - heyoka.py >=0.21.0
     - spdlog
     - xtensor
     - xtensor-blas
@@ -35,15 +33,9 @@ requirements:
 
   run:
     - python
-    - tbb
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - numpy
-    - fmt
-    - heyoka >=0.21.0
     - heyoka.py >=0.21.0
-    - spdlog
-    - xtensor
-    - xtensor-blas  
 
 test:
   commands:
