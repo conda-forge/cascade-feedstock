@@ -11,6 +11,9 @@ source:
 
 build:
   number: 0
+  ignore_run_exports:
+    # NOTE: hdf5 is used only in the tests.
+    - hdf5
 
 requirements:
   build:
