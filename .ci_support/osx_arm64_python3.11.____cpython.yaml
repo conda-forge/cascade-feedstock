@@ -15,7 +15,7 @@ cxx_compiler_version:
 fmt:
 - '10'
 hdf5:
-- 1.12.2
+- 1.14.2
 macos_machine:
 - arm64-apple-darwin20.0.0
 pin_run_as_build:
