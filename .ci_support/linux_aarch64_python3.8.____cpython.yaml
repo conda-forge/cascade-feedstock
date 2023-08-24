@@ -3,7 +3,7 @@ BUILD:
 c_compiler:
 - gcc
 c_compiler_version:
-- '11'
+- '12'
 cdt_arch:
 - aarch64
 cdt_name:
@@ -15,13 +15,13 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '11'
+- '12'
 docker_image:
-- quay.io/condaforge/linux-anvil-aarch64
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 fmt:
-- '9'
+- '10'
 hdf5:
-- 1.14.0
+- 1.12.2
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -31,7 +31,7 @@ pybind11_abi:
 python:
 - 3.8.* *_cpython
 spdlog:
-- '1.11'
+- '1.12'
 target_platform:
 - linux-aarch64
 tbb_devel:
