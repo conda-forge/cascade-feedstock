@@ -9,7 +9,9 @@ cxx_compiler:
 fmt:
 - '10'
 hdf5:
-- 1.12.2
+- 1.14.2
+libboost_devel:
+- '1.82'
 pin_run_as_build:
   python:
     min_pin: x.x
