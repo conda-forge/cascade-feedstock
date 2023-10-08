@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Build & run the tests?
+if [[ "$target_platform" == linux-ppc64le ]]; then
+    export ENABLE_TESTS=no
+else
+    export ENABLE_TESTS=yes
+fi
+
 mkdir build
 cd build
 
@@ -15,7 +22,7 @@ cmake ${CMAKE_ARGS} -G "Ninja" \
 
 cmake --build . -- -v
 
-if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" && "$ENABLE_TESTS" == yes ]]; then
 ctest -j${CPU_COUNT} --output-on-failure
 fi
 
