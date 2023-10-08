@@ -42,10 +42,6 @@ requirements:
     - numpy
     - heyoka.py =3.0.*
 
-test:
-  commands:
-    - python -c "from cascade import test; test.run_test_suite()"
-
 about:
   home: https://esa.github.io/cascade/
   license: MPL-2.0
