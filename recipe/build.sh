@@ -22,8 +22,10 @@ cmake ${CMAKE_ARGS} -G "Ninja" \
 
 cmake --build . -- -v
 
-if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" && "$ENABLE_TESTS" == yes ]]; then
-ctest -j${CPU_COUNT} --output-on-failure
+if [[ "$ENABLE_TESTS" == yes ]]; then
+    if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
+        ctest -j${CPU_COUNT} --output-on-failure
+    fi
 fi
 
 cmake --build . --target install
