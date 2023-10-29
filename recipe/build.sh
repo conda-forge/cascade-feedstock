@@ -7,6 +7,11 @@ else
     export ENABLE_TESTS=yes
 fi
 
+if [[ "$target_platform" == osx-* ]]; then
+    # Workaround for compile issue on older OSX SDKs.
+    export CXXFLAGS="$CXXFLAGS -fno-aligned-allocation -D_LIBCPP_DISABLE_AVAILABILITY"
+fi
+
 mkdir build
 cd build
 
