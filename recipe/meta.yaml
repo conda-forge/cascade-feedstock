@@ -10,7 +10,7 @@ source:
   sha256: f21352d53f90bbf94d1b2c841108e5efd05d37a141896efcabce04ca728b2dc0
 
 build:
-  number: 1
+  number: 2
   ignore_run_exports:
     # NOTE: hdf5 is used only in the tests.
     - hdf5
@@ -31,7 +31,7 @@ requirements:
     - tbb-devel
     - libboost-devel
     - fmt
-    - heyoka =3.0.*
+    - heyoka =3.*
     - spdlog
     - xtensor
     - xtensor-blas
@@ -40,7 +40,7 @@ requirements:
   run:
     - python
     - numpy
-    - heyoka.py =3.0.*
+    - heyoka.py =3.*
 
 about:
   home: https://esa.github.io/cascade/
