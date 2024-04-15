@@ -2,7 +2,7 @@ mkdir build
 cd build
 
 cmake ^
-    -G "Visual Studio 16 2019" -A x64 ^
+    -G "Visual Studio 17 2022" -A x64 ^
     -DPython3_EXECUTABLE=%PREFIX%\python.exe ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
@@ -15,6 +15,6 @@ cmake --build . --config Release
 
 set PATH=%PATH%;%CD%\Release
 
-ctest --output-on-failure -j${CPU_COUNT} -V -C Release
+ctest --output-on-failure -j%CPU_COUNT% -V -C Release
 
 cmake --build . --config Release --target install
