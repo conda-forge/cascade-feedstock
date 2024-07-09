@@ -32,7 +32,7 @@ requirements:
     - tbb-devel
     - libboost-devel
     - fmt
-    - heyoka =3.*
+    - heyoka =5.*
     - spdlog
     - xtensor
     - xtensor-blas
@@ -41,7 +41,7 @@ requirements:
   run:
     - python
     - numpy
-    - heyoka.py =3.*
+    - heyoka.py =5.*
 
 about:
   home: https://esa.github.io/cascade/
