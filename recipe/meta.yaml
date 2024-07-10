@@ -1,5 +1,5 @@
 {% set name = "cascade" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/esa/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: f21352d53f90bbf94d1b2c841108e5efd05d37a141896efcabce04ca728b2dc0
+  sha256: 9081ff90c297504e1dd3fa35a8965961f1da987241160e593c31e7c8168ea13c
 
 build:
-  number: 3
+  number: 0
   ignore_run_exports:
     # NOTE: hdf5 is used only in the tests.
     - hdf5
