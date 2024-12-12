@@ -1,5 +1,5 @@
 {% set name = "cascade" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/esa/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: f21352d53f90bbf94d1b2c841108e5efd05d37a141896efcabce04ca728b2dc0
+  sha256: e58da399e5b24e684fe37a68d5d20aef2af39a3b3dd8cf9fbda4b401238ac340
 
 build:
-  number: 3
+  number: 0
   ignore_run_exports:
     # NOTE: hdf5 is used only in the tests.
     - hdf5
@@ -19,7 +19,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - pybind11                               # [build_platform != target_platform]
+    - pybind11 >=2.10                        # [build_platform != target_platform]
     - cmake >=3.18
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
@@ -32,7 +32,7 @@ requirements:
     - tbb-devel
     - libboost-devel
     - fmt
-    - heyoka =3.*
+    - heyoka >= 6*
     - spdlog
     - xtensor
     - xtensor-blas
@@ -41,7 +41,7 @@ requirements:
   run:
     - python
     - numpy
-    - heyoka.py =3.*
+    - heyoka.py >= 6*
 
 about:
   home: https://esa.github.io/cascade/
