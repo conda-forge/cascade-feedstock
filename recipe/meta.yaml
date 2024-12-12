@@ -10,7 +10,7 @@ source:
   sha256: e58da399e5b24e684fe37a68d5d20aef2af39a3b3dd8cf9fbda4b401238ac340
 
 build:
-  number: 0
+  number: 1
   ignore_run_exports:
     # NOTE: hdf5 is used only in the tests.
     - hdf5
