@@ -22,7 +22,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - pybind11 >=2.10                        # [build_platform != target_platform]
+    - pybind11                               # [build_platform != target_platform]
     - cmake >=3.18
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
@@ -30,7 +30,7 @@ requirements:
     - ninja
   host:
     - python
-    - pybind11 >=2.10
+    - pybind11
     - pybind11-abi
     - tbb-devel
     - libboost-devel
