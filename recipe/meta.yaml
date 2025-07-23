@@ -8,6 +8,9 @@ package:
 source:
   url: https://github.com/esa/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: e58da399e5b24e684fe37a68d5d20aef2af39a3b3dd8cf9fbda4b401238ac340
+  patches:
+    # backport https://github.com/esa/cascade/commit/b791b18748e7d43b6d1d75cde4afe2dadf492a4b
+    - patches/0001-fix-heyok-v6-v7.patch
 
 build:
   number: 2
