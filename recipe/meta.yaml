@@ -37,7 +37,8 @@ requirements:
     - fmt
     - heyoka >=6*
     - spdlog
-    - xtensor
+    # `#include <xtensor/xadapt.hpp>` moved to xtensor/containers/xadapt.hpp in 0.26
+    - xtensor <0.26
     - xtensor-blas
     - hdf5
 
