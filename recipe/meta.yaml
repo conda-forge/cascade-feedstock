@@ -34,7 +34,7 @@ requirements:
     - fmt
     - heyoka >=7.4 # required as per xtensor 0.26 compatibility
     - spdlog
-    - xtensor >= 0.26 # required as per heyoka >= 7.4 compatibility
+    - xtensor >=0.26 # required as per heyoka >= 7.4 compatibility
     - xtensor-blas 
     - hdf5
 
