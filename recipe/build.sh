@@ -21,7 +21,6 @@ cmake ${CMAKE_ARGS} -G "Ninja" \
     -DPython3_EXECUTABLE=$PREFIX/bin/python \
     -DCMAKE_BUILD_TYPE=Release \
     -DCASCADE_BUILD_TESTS=yes \
-    -DBoost_NO_BOOST_CMAKE=ON \
     -DCASCADE_BUILD_PYTHON_BINDINGS=yes \
     ..
 

@@ -32,16 +32,16 @@ requirements:
     - tbb-devel
     - libboost-devel
     - fmt
-    - heyoka >=7.4 # required as per xtensor 0.26 compatibility
+    - heyoka =7.5.* # required as per xtensor 0.26 compatibility
     - spdlog
-    - xtensor >=0.26 # required as per heyoka >= 7.4 compatibility
+    - xtensor =0.26 # required as per heyoka >= 7.4 compatibility
     - xtensor-blas 
     - hdf5
 
   run:
     - python
     - numpy
-    - heyoka.py >=7.4
+    - heyoka.py =7.5.*
 
 about:
   home: https://esa.github.io/cascade/
